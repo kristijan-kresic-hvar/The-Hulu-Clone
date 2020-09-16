@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+    color: white;
+    overflow-x: scroll;
+    padding: 10px;
+    padding-left: 40px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+.nav h2 {
+    cursor: pointer;
+    margin: 0 30px;
+    font-weight: 500;
+    opacity: .7;
+    transition: transform 50ms ease-out;
+    -webkit-transition: transform 50ms ease-out;
+    -moz-transition: transform 50ms ease-out;
+    -ms-transition: transform 50ms ease-out;
+    -o-transition: transform 50ms ease-out;
+    white-space: nowrap;
+}
+
+.nav h2:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
