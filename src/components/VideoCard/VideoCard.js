@@ -1,13 +1,31 @@
 import React from 'react';
 import './VideoCard.css';
+import TextTruncate from 'react-text-truncate';
+import { ThumbUpSharp } from '@material-ui/icons';
 
-function VideoCard({ movie }) {
+import LoadingGif from '../../popcorn_loading_gif.gif';
+
+const base_image_url = "https://image.tmdb.org/t/p/original/";
+
+function VideoCard({ movie, loading }) {
     return (
         <div className="videoCard">
-            <img src="https://cdn2-www.comingsoon.net/assets/uploads/2019/12/posters.jpg" alt="Movie poster" />
-            <p>This is a movie about joker</p>
-            <h2>Movie Title</h2>
-            <p>Number of likes...</p>
+            {!loading ? <div>
+                <img src={base_image_url + movie.backdrop_path || movie.poster_path} alt="Movie poster" />
+                <TextTruncate 
+                    line={1}
+                    element="p"
+                    truncateText="..."
+                    text={movie.overview}
+                />
+                <h2>{movie.title || movie.original_name}</h2>
+                <p className="videoCard__stats">
+                    {movie.media_type && `${movie.media_type} *`}
+                    {movie.release_date || movie.first_air.date} *
+                    <ThumbUpSharp />
+                    {movie.vote_count}
+                </p>
+            </div> : <img className="loading" src={LoadingGif} alt="loading gif" />}
         </div>
     )
 }
