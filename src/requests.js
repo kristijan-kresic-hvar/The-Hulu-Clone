@@ -1,7 +1,7 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export default {
-    fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+    fetchTrending: `/trending/all/week?api_key=${API_KEY}`,
     fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
     fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
     fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
