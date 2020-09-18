@@ -1,0 +1,46 @@
+.videoCard {
+    color: white;
+    width: 90%;
+    max-width: 500px;
+    height: 400px;
+    padding: 20px;
+    transition: transform 100ms;
+    -webkit-transition: transform 100ms;
+    -moz-transition: transform 100ms;
+    -ms-transition: transform 100ms;
+    -o-transition: transform 100ms;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.videoCard:hover {
+    transform: scale(1.09);
+    -webkit-transform: scale(1.09);
+    -moz-transform: scale(1.09);
+    -ms-transform: scale(1.09);
+    -o-transform: scale(1.09);
+}
+
+.videoCard img {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.videoCard h2 {
+    padding-top: 10px;
+}
+
+.loading {
+    width: 50%;
+    height: 50%;
+}
+
+.videoCard:hover .videoCard__stats {
+    display: block;
+}
+
+.videoCard__stats {
+    display: none;
+}

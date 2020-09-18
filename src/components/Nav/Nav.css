@@ -25,6 +25,10 @@
     white-space: nowrap;
 }
 
+.nav h2:last-child {
+    margin-right: 0;
+}
+
 .nav h2:hover {
     opacity: 1;
     transform: scale(1.1);
